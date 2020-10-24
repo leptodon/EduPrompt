@@ -1,4 +1,4 @@
-package ru.cactus.eduprompt.ui.main.view
+package ru.cactus.eduprompt.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,10 +12,10 @@ import kotlinx.android.synthetic.main.activity_main.*
 import ru.cactus.eduprompt.R
 import ru.cactus.eduprompt.data.api.ApiHelper
 import ru.cactus.eduprompt.data.api.RetrofitBuilder
-import ru.cactus.eduprompt.data.model.Result
-import ru.cactus.eduprompt.ui.base.ViewModelFactory
-import ru.cactus.eduprompt.ui.main.adapter.MainAdapter
-import ru.cactus.eduprompt.ui.main.viewmodel.MainViewModel
+import ru.cactus.eduprompt.data.entities.Result
+import ru.cactus.eduprompt.presentation.base.ViewModelFactory
+import ru.cactus.eduprompt.presentation.main.MainAdapter
+import ru.cactus.eduprompt.presentation.main.MainViewModel
 import ru.cactus.eduprompt.util.Status
 
 class MainActivity : AppCompatActivity() {

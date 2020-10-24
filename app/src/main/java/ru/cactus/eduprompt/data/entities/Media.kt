@@ -1,4 +1,4 @@
-package ru.cactus.eduprompt.data.model
+package ru.cactus.eduprompt.data.entities
 
 data class Media(
     val lesson_description: LessonDescription,

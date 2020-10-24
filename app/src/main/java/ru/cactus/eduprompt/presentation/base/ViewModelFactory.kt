@@ -1,10 +1,10 @@
-package ru.cactus.eduprompt.ui.base
+package ru.cactus.eduprompt.presentation.base
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import ru.cactus.eduprompt.data.api.ApiHelper
 import ru.cactus.eduprompt.data.repository.MainRepository
-import ru.cactus.eduprompt.ui.main.viewmodel.MainViewModel
+import ru.cactus.eduprompt.presentation.main.MainViewModel
 
 class ViewModelFactory(private val apiHelper: ApiHelper) : ViewModelProvider.Factory {
 

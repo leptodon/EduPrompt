@@ -1,6 +1,5 @@
-package ru.cactus.eduprompt.ui.main.adapter
+package ru.cactus.eduprompt.presentation.main
 
-import android.text.method.TextKeyListener.clear
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_layout.view.*
 import ru.cactus.eduprompt.R
-import ru.cactus.eduprompt.data.model.Result
+import ru.cactus.eduprompt.data.entities.Result
 
 class MainAdapter(private val lessonsList: ArrayList<Result>) : RecyclerView.Adapter<MainAdapter.DataViewHolder>() {
 
@@ -19,7 +18,7 @@ class MainAdapter(private val lessonsList: ArrayList<Result>) : RecyclerView.Ada
                 textViewUserName.text = lesson.name
                 textViewUserEmail.text = lesson.org
                 Glide.with(imageViewAvatar.context)
-                    .load(lesson.media.lesson_image)
+                    .load(lesson.media.lesson_image.uri)
                     .into(imageViewAvatar)
             }
         }

@@ -1,4 +1,4 @@
-package ru.cactus.eduprompt.ui.main.viewmodel
+package ru.cactus.eduprompt.presentation.main
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
