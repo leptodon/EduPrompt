@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/ru/cactus/eduprompt/data/repository/dto/CourseImage.kt" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/ru/cactus/eduprompt/data/repository/dto/CoursesList.kt" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/ru/cactus/eduprompt/data/repository/dto/CourseVideo.kt" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/ru/cactus/eduprompt/data/repository/dto/Image.kt" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/ru/cactus/eduprompt/data/repository/dto/Media.kt" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/ru/cactus/eduprompt/data/repository/dto/Pagination.kt" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/ru/cactus/eduprompt/data/repository/dto/Result.kt" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
