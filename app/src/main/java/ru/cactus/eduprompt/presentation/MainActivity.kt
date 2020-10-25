@@ -9,6 +9,8 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
+import org.koin.android.scope.currentScope
+import org.koin.android.viewmodel.ext.koin.viewModel
 import ru.cactus.eduprompt.R
 import ru.cactus.eduprompt.data.api.ApiHelper
 import ru.cactus.eduprompt.data.api.RetrofitBuilder
@@ -20,7 +22,7 @@ import ru.cactus.eduprompt.util.Status
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var viewModel: MainViewModel
+    private val mainViewModel: MainViewModel by currentScope.viewModel(this)
     private lateinit var adapter: MainAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun setupViewModel() {
-        viewModel = ViewModelProviders.of(
+        mainViewModel = ViewModelProviders.of(
             this,
             ViewModelFactory(ApiHelper(RetrofitBuilder.apiService))
         ).get(MainViewModel::class.java)
@@ -52,7 +54,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupObservers() {
-        viewModel.getLessons().observe(this, Observer {
+        mainViewModel.getLessons().observe(this, Observer {
             it?.let { resource ->
                 when (resource.status) {
                     Status.SUCCESS -> {
