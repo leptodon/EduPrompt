@@ -4,7 +4,8 @@ import android.app.Application
 import androidx.appcompat.app.AppCompatDelegate
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
-import ru.cactus.eduprompt.di.lessonsModule
+import ru.cactus.eduprompt.di.DataModel
+import ru.cactus.eduprompt.di.ViewModelModule
 
 class Application : Application() {
 
@@ -20,11 +21,8 @@ class Application : Application() {
             androidContext(this@Application)
             modules(
                 listOf(
-//                    headerModule,
-//                    counterModule,
-//                    homeworkModue,
-//                    footerModule,
-                    lessonsModule
+                    DataModel.get(),
+                    ViewModelModule.get()
                     )
             )
         }
